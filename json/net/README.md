@@ -1,4 +1,4 @@
-# httpurl demo
+# json demo
 
 ## Requirments
 To run this demo you'll need to download the latest version of IPWorks from either our website or NuGet.
@@ -8,7 +8,7 @@ To run this demo you'll need to download the latest version of IPWorks from eith
 > NuGet Command: `Install-Package nsoftware.IPWorks`
 
 ## Description
-This demo shows how to download the content of a URL using an HTTP GET command.
+This demo uses the JSON object to parse JSON from a URL, file, or string input sources.
 
 ## Support
 If you find any issues with a demo application please contact support@nsoftware.com

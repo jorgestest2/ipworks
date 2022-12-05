@@ -1,4 +1,4 @@
-# httpurl language-specific demos
+# json language-specific demos
 
 ## Requirments
 To run this demo you'll need to download the latest version of IPWorks from our website.
@@ -6,7 +6,7 @@ To run this demo you'll need to download the latest version of IPWorks from our 
 > DirectLink: [https://www.nsoftware.com/ipworks/](https://www.nsoftware.com/ipworks/)
 
 ## Description
-This demo shows how to download the content of a URL using an HTTP GET command.
+This demo uses the JSON object to parse JSON from a URL, file, or string input sources.
 
 Each folder represents a different edition (language) of the same demo functionality.
 
