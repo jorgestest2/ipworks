@@ -1,3 +1,8 @@
+/*
+ * IPWorks 2022 .NET Edition - Demo Application
+ * Copyright (c) 2022 /n software inc. - All rights reserved. - www.nsoftware.com
+ */
+
 using System;
 using System.Threading.Tasks;
 using nsoftware.async.IPWorks;
@@ -40,3 +45,5 @@ class httpurlDemo {
     }
   }
 }
+
+
