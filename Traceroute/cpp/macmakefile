@@ -1,0 +1,18 @@
+
+#
+# IPWorks 2022 C++ Edition - Demo Application
+#
+# Copyright (c) 2023 /n software inc. - All rights reserved. - www.nsoftware.com
+#
+
+R_PATH=-Wl,-rpath,../../lib64/,-rpath,.
+
+FRAMEWORK = -framework Carbon -framework Security
+LD_FLAGS = -lipworks.22.0 -L../../lib64/
+LD_FLAGS_SRC = -lz -ldl 
+OS_CFLAGS = -D UNIX64 -arch x86_64
+MACOS = "darwin% Darwin% macos%"
+
+all:
+	g++ $(OS_CFLAGS) -D UNIX -o tracert tracert.cpp  -I../../include/ $(LD_FLAGS) $(FRAMEWORK) $(R_PATH) 
+

@@ -1,0 +1,30 @@
+
+#
+# IPWorks 2022 C++ Edition - Demo Application
+#
+# Copyright (c) 2023 /n software inc. - All rights reserved. - www.nsoftware.com
+#
+
+ifeq ($(shell uname -m), x86_64)
+  LIB=lib64
+else
+  LIB=lib
+endif
+
+R_PATH=-Wl,-rpath,../../$(LIB)/,-rpath,.
+LD_FLAGS = -lipworks  -L../../$(LIB)/
+LD_FLAGS_SRC = -lz -ldl 
+
+all:
+	g++ -D UNIX -o echoclient echoclient.cpp  -I../../include/ $(LD_FLAGS) $(R_PATH) 
+
+src: ../../src/ipworks.o
+	g++ -D UNIX -o echoclient ../../src/ipworks.o echoclient.cpp  -I../../include/ $(LD_FLAGS_SRC)
+
+../../src/ipworks.o:
+	g++ -c -fno-exceptions -fno-rtti -fPIC -o ../../src/ipworks.o ../../src/ipworks.cpp
+
+clean:
+	rm -f ../../src/*.o
+	rm -f echoclient *.o
+
